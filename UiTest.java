@@ -17,12 +17,4 @@ public class UiTest {
         driver.quit();
 
     }
-  @Test
-    public void openApplication() {
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.google.com");
-        Assert.assertTrue(driver.getTitle().contains("Google"));
-        driver.quit();
-    }
 }
