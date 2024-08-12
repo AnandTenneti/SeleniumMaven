@@ -35,6 +35,11 @@
             <version>4.19.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>4.19.1</version>
+        </dependency>
     </dependencies>
     <build>
         <pluginManagement>
@@ -47,6 +52,9 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
+                        <systemPropertyVariables>
+                            <browser>${Browser}</browser>
+                        </systemPropertyVariables>
                     </configuration>
                 </plugin>
             </plugins>
