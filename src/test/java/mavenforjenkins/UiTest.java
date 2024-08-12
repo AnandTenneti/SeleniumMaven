@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -15,12 +16,12 @@ public class UiTest {
 
     @Parameters("Browser")
     @BeforeMethod
-    public void browserSetUp(String browserName){
+    public void browserSetUp(String browserName) {
         System.out.println("Parameter value is " + browserName);
         if (browserName.contains("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-        } else if(browserName.contains("firefox")) {
+        } else if (browserName.contains("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
         }
@@ -28,14 +29,18 @@ public class UiTest {
 
     @Test
     public void openApplication() {
-            driver.get("https://www.google.com");
+        driver.get("https://www.google.com");
         Assert.assertTrue(driver.getTitle().contains("Google"));
-        driver.quit();
     }
+
     @Test
     public void openNewApplication() {
         driver.get("https://www.facebook.com");
         Assert.assertTrue(driver.getTitle().contains("Facebook"));
+    }
+
+    @AfterMethod
+    public void closeBrowser() {
         driver.quit();
     }
 }
