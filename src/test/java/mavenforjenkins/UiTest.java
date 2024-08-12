@@ -18,7 +18,7 @@ public class UiTest {
 
     }
   @Test
-    public void openApplication() {
+    public void openNewApplication() {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
