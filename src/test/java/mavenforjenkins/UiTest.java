@@ -46,6 +46,12 @@ public class UiTest {
         driver.get("https://www.gmail.com");
         Assert.assertTrue(driver.getTitle().contains("Gmail"));
     }
+    @Test
+    public void openAnotherSecondNewApplication() {
+        System.out.println("Welcome again to Google ads");
+        driver.get("https://ads.google.com/home/");
+        Assert.assertTrue(driver.getTitle().contains("Google Ads"));
+    }
 
     @AfterMethod
     public void closeBrowser() {
