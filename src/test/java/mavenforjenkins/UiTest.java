@@ -38,6 +38,11 @@ public class UiTest {
         driver.get("https://www.facebook.com");
         Assert.assertTrue(driver.getTitle().contains("Facebook"));
     }
+    @Test
+    public void openAnotherNewApplication() {
+        driver.get("https://www.gmail.com");
+        Assert.assertTrue(driver.getTitle().contains("Gmail"));
+    }
 
     @AfterMethod
     public void closeBrowser() {
