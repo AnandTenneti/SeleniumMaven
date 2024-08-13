@@ -29,6 +29,7 @@ public class UiTest {
 
     @Test
     public void openApplication() {
+        System.out.println("WElcome again to Google");
         driver.get("https://www.google.com");
         Assert.assertTrue(driver.getTitle().contains("Google"));
     }
