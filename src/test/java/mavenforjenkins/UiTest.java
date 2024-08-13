@@ -29,13 +29,14 @@ public class UiTest {
 
     @Test
     public void openApplication() {
-        System.out.println("WElcome again to Google");
+        System.out.println("Welcome again to Google");
         driver.get("https://www.google.com");
         Assert.assertTrue(driver.getTitle().contains("Google"));
     }
 
     @Test
     public void openNewApplication() {
+        System.out.println("Welcome again to Facebook");
         driver.get("https://www.facebook.com");
         Assert.assertTrue(driver.getTitle().contains("Facebook"));
     }
