@@ -35,6 +35,7 @@ public class UiTest {
 
     @Test
     public void openNewApplication() {
+        System.out.println("Welcome to facebook");
         driver.get("https://www.facebook.com");
         Assert.assertTrue(driver.getTitle().contains("Facebook"));
     }
