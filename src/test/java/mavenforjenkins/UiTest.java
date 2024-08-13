@@ -42,6 +42,7 @@ public class UiTest {
     }
     @Test
     public void openAnotherNewApplication() {
+        System.out.println("Welcome again to Gmail");
         driver.get("https://www.gmail.com");
         Assert.assertTrue(driver.getTitle().contains("Gmail"));
     }
