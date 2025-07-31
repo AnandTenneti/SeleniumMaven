@@ -14,7 +14,7 @@ public class UiTest {
     WebDriver driver = null;
 
 
-    // @Parameters("Browser")
+   
     @BeforeMethod
     public void browserSetUp(String browserName) {
         browserName="chrome";
