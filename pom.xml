@@ -52,9 +52,9 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
-                        <systemPropertyVariables>
+<!--                         <systemPropertyVariables>
                             <browser>${Browser}</browser>
-                        </systemPropertyVariables>
+                        </systemPropertyVariables> -->
                     </configuration>
                 </plugin>
 
