@@ -17,7 +17,7 @@ public class UiTest {
    
     @BeforeMethod
     public void browserSetUp() {
-        browserName="chrome";
+        String browserName="chrome";
         System.out.println("Parameter value is " + browserName);
         if (browserName.contains("chrome")) {
             WebDriverManager.chromedriver().setup();
