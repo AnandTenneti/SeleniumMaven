@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven_3.9.6'   // Must match your Jenkins Maven installation name
+        jdk 'JDK_17'          // Must match your Jenkins JDK installation name
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://your-repo-url.git'
+            }
+        }
+
+        stage('Build & Run Tests') {
+            steps {
+                sh 'mvn clean test'
+            }
+        }
+    }
+
+    post {
+        always {
+            junit '**/target/surefire-reports/*.xml'
+        }
+    }
+}
